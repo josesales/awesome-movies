@@ -1,6 +1,6 @@
 <p align="center">
 
-  <h1 align="center">Easy Chat</h1>
+  <h1 align="center">Awesome Movies</h1>
 
   <p align="center">
     Movies Application that allows you to check different option of movies</p>
