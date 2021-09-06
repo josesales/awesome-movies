@@ -1,0 +1,28 @@
+.heading-primary,
+.heading-primary-animation{
+    color: $color-white-1;
+    text-transform: uppercase;
+    backface-visibility: hidden; /*It fix the little shake in the animation. It hides the back part of the element for the user */
+
+    display: block;
+    font-size: $font-size-big;
+    font-weight: 400;
+    letter-spacing: 3rem;
+
+    @include respond(tab-land) {
+        letter-spacing: 2rem;
+        font-size: $font-size-big-tab-land;
+    }
+    @include respond(tab-port) {
+        letter-spacing: 1rem;
+        font-size: $font-size-big-tab-land;
+    }
+    @include respond(phone) {
+        letter-spacing: 1rem;
+        font-size: $font-size-big-phone;
+    }
+    @include respond(mini-phone) {
+        letter-spacing: 0.5;
+        font-size: $font-size-big-mini-phone;
+    }
+}

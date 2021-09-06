@@ -1,0 +1,49 @@
+.link-button {
+    color: $color-white-1;
+    font-size: $font-size-default;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    background-color: $color-secondary-dark;
+
+    &:hover {
+        background-color: $color-white-1;
+        color: $color-secondary-dark;
+    }
+}
+
+.section-title {
+    cursor: default;
+    display: inline-block;
+    flex-direction: unset;
+    align-items: unset;
+
+    // @supports (-webkit-text-stroke: .6px $color-white-1) {
+    //     color: $color-black-1;
+    //     -webkit-text-stroke: .6px $color-white-1;
+    // }
+
+    @include respond(mini-phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.secondary-background {
+    background-color: $color-black-2;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.section-margin-1 {
+    margin-top: 8rem
+}
+
+.section-margin-2 {
+    margin-top: 5rem
+}
+
+.section-margin-3 {
+    margin-top: 2rem
+}
