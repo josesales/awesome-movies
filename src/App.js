@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Loader from './components/Loader';
 import Home from './pages/Home';
+import {StateContextProvider} from './context/StateContext'
+
 import "./styles/main.scss";
 
 const MovieDetails = lazy(() => import('./pages/MovieDetails'));
@@ -10,10 +12,12 @@ const MovieDetails = lazy(() => import('./pages/MovieDetails'));
 const App = () => {
 
   return (
-    <React.Fragment>
-
-      <Header />
-        <BrowserRouter>
+    <StateContextProvider>
+      
+      <BrowserRouter>
+      
+        <Header />
+        
         <Switch>
           <Suspense fallback={<Loader />}>
             <Route exact path='/' component={Home} />
@@ -21,7 +25,7 @@ const App = () => {
           </Suspense>
         </Switch>
       </BrowserRouter>
-    </React.Fragment>
+    </StateContextProvider>
   );
 }
 

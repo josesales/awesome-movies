@@ -1,3 +1,29 @@
+.input {
+    width: 30%;
+    height: 4rem;
+    font-family: inherit;
+    font-size: $font-size-default;
+    color: inherit;
+    background-color: $color-black-3;
+    border: none;
+    border-radius: 2rem;
+    padding: .7rem 2rem;
+
+    &:focus {
+        outline: none;
+    }
+
+    @include respond(tab-land) {
+        width: 40%;
+    }
+    @include respond(tab-port) {
+        width: 50%;
+    }
+    @include respond(phone) {
+        width: 70%;
+    }
+}
+
 .link-button {
     color: $color-white-1;
     font-size: $font-size-default;
@@ -17,11 +43,6 @@
     display: inline-block;
     flex-direction: unset;
     align-items: unset;
-
-    // @supports (-webkit-text-stroke: .6px $color-white-1) {
-    //     color: $color-black-1;
-    //     -webkit-text-stroke: .6px $color-white-1;
-    // }
 
     @include respond(mini-phone) {
         display: flex;
