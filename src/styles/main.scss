@@ -11,6 +11,7 @@
 
 //Components
 @import "components/header";
+@import "components/internal-error";
 @import "components/loader";
 @import "components/logo";
 @import "components/movie-items";
@@ -19,3 +20,5 @@
 //Pages
 @import "pages/home";
 @import "pages/movie-details";
+@import "pages/watch-list";
+@import "pages/watched";

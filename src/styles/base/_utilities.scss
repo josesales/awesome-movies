@@ -40,15 +40,13 @@
 
 .section-title {
     cursor: default;
-    display: inline-block;
-    flex-direction: unset;
-    align-items: unset;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+}
 
-    @include respond(mini-phone) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.section-span {
+    cursor: default;
+    font-size: 2rem;
 }
 
 .secondary-background {

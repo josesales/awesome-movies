@@ -7,6 +7,8 @@ import {StateContextProvider} from './context/StateContext'
 
 import "./styles/main.scss";
 
+const WatchList = lazy(() => import('./pages/WatchList'));
+const Watched = lazy(() => import('./pages/Watched'));
 const MovieDetails = lazy(() => import('./pages/MovieDetails'));
 
 const App = () => {
@@ -21,6 +23,8 @@ const App = () => {
         <Switch>
           <Suspense fallback={<Loader />}>
             <Route exact path='/' component={Home} />
+            <Route path='/watchList' component={WatchList} />
+            <Route path='/watched' component={Watched} />
             <Route path='/movieDetails' component={MovieDetails} />
           </Suspense>
         </Switch>

@@ -1,34 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { get } from '../util/requestSender';
-import Loader from './Loader'
+import React from 'react';
 import MovieItem from './MovieItem'
 
-const MovieItems = () => {
-
-    const [loading, setLoading] = useState(false);
-    const [movies, setMovies] = useState([]);
-    const [page, setPage] = useState(1);
+const MovieItems = ({movies}) => {
 
     const MoviesUi = movies.map(movie => <MovieItem key={movie.id} movie={movie}/>);
 
-    useEffect(() => {
-
-        const getMovies = async () => {
-
-            setLoading(true)
-            const { results } = await get(`trending/all/week?page=${page}`);
-            setMovies(results);
-            setLoading(false)
-        }
-        getMovies();
-    }, []);
-    
     return (
-        <div className="movie-items">
-            {
-                loading ? <Loader /> : 
-                MoviesUi
-            }
+        <div className="movie-items section-margin-2">
+            {MoviesUi}
         </div>
     );
 }

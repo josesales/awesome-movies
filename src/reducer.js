@@ -6,6 +6,7 @@
         
         return {
           ...state,
+          watched: state.watched.filter(movie => movie.id !== action.payload.id),
           watchList: [action.payload].concat(state.watchList),
         };
 
@@ -35,3 +36,5 @@
         return state;
     }
   };
+
+  export default reducer;

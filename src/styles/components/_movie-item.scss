@@ -1,3 +1,89 @@
 .movie-item {
-    margin-right: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20rem;
+    height: 30rem;
+    background-size: cover;
+    border-radius: 2rem;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    &__img-placeholder {
+        width: 100%;
+        height: 70%;
+    }
+
+    &__options {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__list {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__span,
+    &__details {
+        margin-bottom: 1rem;
+        padding: .5rem 1rem;
+        border-radius: 2rem;
+        width: 12rem;
+        text-align: center;
+        font-size: $font-size-default;
+        border: 1px solid rgba($color-grey-light-2, 0.5);
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+
+    &__details {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &:hover > &__options, 
+    &:focus > &__options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover > &__img, 
+    &:focus > &__img {
+        opacity: 0.3;
+    }
+}
+
+.placeholder-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &__span {
+        font-size: 15px;
+    }
 }
