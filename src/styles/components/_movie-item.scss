@@ -7,7 +7,6 @@
     position: relative;
     width: 20rem;
     height: 30rem;
-    background-size: cover;
     border-radius: 2rem;
 
     &__img {
@@ -40,23 +39,8 @@
         align-items: center;
     }
 
-    &__span,
     &__details {
-        margin-bottom: 1rem;
-        padding: .5rem 1rem;
-        border-radius: 2rem;
-        width: 12rem;
-        text-align: center;
-        font-size: $font-size-default;
-        border: 1px solid rgba($color-grey-light-2, 0.5);
-        cursor: pointer;
-
-        &:hover {
-            background-color: $color-primary;
-        }
-    }
-
-    &__details {
+        @include list-button;
         text-decoration: none;
         color: inherit;
     }

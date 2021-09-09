@@ -22,10 +22,10 @@ const Home = () => {
         
                 if(currentText && currentText.trim()) {
         
-                    const data = await get(`search/multi?page=1&include_adult=false&query=${currentText}`);
-                    results = data.results.filter(movie => movie.media_type === 'movie' || movie.media_type === 'tv');
+                    const data = await get(`search/movie?page=1&include_adult=false&query=${currentText}`);
+                    results = data.results;
                 }else {
-                    const data = await get(`trending/all/week?page=1`);
+                    const data = await get(`trending/movie/week?page=1`);
                     results = data.results;
                 }
                 setMovies(results);

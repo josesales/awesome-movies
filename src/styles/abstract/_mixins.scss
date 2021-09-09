@@ -14,6 +14,21 @@
     background-image: linear-gradient(to right bottom, $color-grey-dark-2, $color-secondary-dark);
 }
 
+@mixin list-button {
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    width: 12rem;
+    text-align: center;
+    font-size: $font-size-default;
+    border: 1px solid rgba($color-grey-light-2, 0.5);
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-primary;
+    }
+}
+
 
 //media query manager
 /*

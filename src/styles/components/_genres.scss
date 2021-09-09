@@ -1,0 +1,29 @@
+.genres {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	cursor: default;
+
+    &__ul {
+        list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		font-weight: 600;
+
+        :not(:last-child) {
+			margin-right: 1rem;
+		}
+    }
+
+    &__li {
+        font-size: $font-size-default;
+		font-weight: 400;
+        text-transform: capitalize;
+
+        @include respond(phone) {
+            font-size: $font-size-big;
+        }
+    }
+}
