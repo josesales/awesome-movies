@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback} from 'react'
 import { useHistory } from 'react-router';
-import { useCallback } from 'react/cjs/react.development';
 import Genres from '../components/Genres';
 import InternalError from '../components/InternalError';
 import ListsManager from '../components/ListsManager';
