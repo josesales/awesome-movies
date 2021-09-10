@@ -16,7 +16,8 @@
 
 <h3>Interesting Features</h3>
 <ul>
-  <li>Communication with Third Party API</li>
+  <li>Integration with Third Party API</li>
   <li>Movies Search</li>
-  <li>Add movies to Watch List</li>
+  <li>Watch List</li>
+  <li>Watched List</li>
 </ul>
