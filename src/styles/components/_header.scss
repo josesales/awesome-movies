@@ -19,6 +19,7 @@
         border-radius: 2rem;
         background-color: $color-black-1;
         cursor: pointer;
+        white-space: nowrap;
 
         @include respond(phone) {
             margin-right: 0;

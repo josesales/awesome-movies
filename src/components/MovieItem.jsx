@@ -22,10 +22,11 @@ const MovieItem = ({movie}) => (
 
             <div className="movie-item__list">
                 
-                <Link className="movie-item__details" to={{pathname: '/movieDetails', state: {movie}}}>Details</Link>
                 <ListsManager movie={movie} listName="watchList" text="Watch List"/>
                 <ListsManager movie={movie} listName="watched" text="Watched"/>
             </div>
+            
+            <Link className="movie-item__details" to={{pathname: '/movieDetails', state: {movie}}}>Details</Link>
         </div>
     </div>
 );
