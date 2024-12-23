@@ -1,8 +1,15 @@
 .home {
-    margin-top: $margin-from-header;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-top: $margin-from-header;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .input {
+    transition: all 0.2s ease-in 0s;
+    &:focus {
+      transform: scale(1.085);
+    }
+  }
 }
