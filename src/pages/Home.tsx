@@ -14,7 +14,7 @@ const Home = () => {
   const [internalError, setInternalError] = useState(false);
   const debounce = useDebounce(1000);
 
-  const search = useCallback(async (currentText) => {
+  const search = useCallback(async (currentText: string) => {
     try {
       let results = null;
       setLoading(true);
@@ -35,7 +35,7 @@ const Home = () => {
     }
   }, []);
 
-  const searchMovie = debounce((currentText) => {
+  const searchMovie = debounce((currentText: string) => {
     search(currentText);
   });
 
@@ -45,7 +45,7 @@ const Home = () => {
   }, [search]);
 
   const onTextChange = useCallback(
-    (event) => {
+    (event: React.ChangeEvent<HTMLInputElement>) => {
       const currentText = event.target.value;
 
       setText(currentText);
